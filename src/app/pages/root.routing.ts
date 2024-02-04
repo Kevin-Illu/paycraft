@@ -6,12 +6,11 @@ import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'dashboard',
     component: RootComponent,
     children: [
-      { path: 'dashboard', component: DashboardComponent },
+      { path: '', component: DashboardComponent },
       { path: 'about', component: AboutComponent },
-      { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
     ],
   },
 ];

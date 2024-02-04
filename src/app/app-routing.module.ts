@@ -2,18 +2,18 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { RootRoutingModule } from './pages/root.routing';
 
-import { RegisterComponent } from './auth/register/register.component';
-import { LoginComponent } from './auth/login/login.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AuthRoutingModule } from './auth/auth.routing';
 
 const routes: Routes = [
-  { path: 'register', component: RegisterComponent },
-  { path: 'login', component: LoginComponent },
+  // path: /dashboard RootRouting
+  // path: /auth AuthRouting
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), RootRoutingModule],
+  imports: [RouterModule.forRoot(routes), RootRoutingModule, AuthRoutingModule],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

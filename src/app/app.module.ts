@@ -4,8 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { RootModule } from './pages/root.module';
 
 import { AppComponent } from './app.component';
-import { AuthModule } from './auth/auth/auth.module';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [AppComponent, NotFoundComponent],
